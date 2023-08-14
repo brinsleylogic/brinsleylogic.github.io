@@ -1,0 +1,25 @@
+{
+    "name": "brinsleylogic.github.io",
+    "description": "Online resume written using SolidJS and Astro",
+    "type": "module",
+    "version": "2.0.0",
+    "scripts": {
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "dependencies": {
+        "@astrojs/solid-js": "^2.2.0",
+        "astro": "^2.10.2",
+        "dayjs": "^1.11.9",
+        "solid-icons": "^1.0.11",
+        "solid-js": "^1.7.9",
+        "tinycolor2": "^1.6.0"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@types/tinycolor2": "^1.4.3",
+        "prettier": "^3.0.1",
+        "prettier-plugin-astro": "^0.11.0"
+    }
+}

@@ -1,0 +1,123 @@
+---
+import dayjs from "dayjs"
+import Layout from "../layouts/Layout.astro"
+import ProfessionalTech from "./tech/ProfessionalTech.astro"
+import PersonalTech from "./tech/PersonalTech.astro"
+
+const careerSpan = dayjs().diff("2011-08-17", "year", true)
+const fullYears = Math.floor(careerSpan)
+
+const yearsOfExperience =
+    careerSpan - fullYears < 0.8 ? `${fullYears}+` : Math.ceil(careerSpan)
+---
+
+<Layout title="Brinsley Blackwood">
+    <section class="about pt pb">
+        <div class="intro">
+            <img src="/ProfileImage.jpg" />
+
+            <div>
+                <h1>Brinsley Blackwood</h1>
+                <h2>Software Engineer</h2>
+                <h2>Game Developer</h2>
+            </div>
+        </div>
+        <p>
+            I'm a <span class="highlight">full stack software engineer</span> with
+            expertise throughout the Software Development Lifecycle; from requirements
+            gathering, system's design and UI/UX design, through to implmentation
+            and deployment.
+        </p>
+
+        <p>
+            My primary passion is <span class="highlight"
+                >game design and development</span
+            > but I honestly just love to solve problems and learn new things along
+            the way. I've always enjoyed learning and that drives me to incorporate
+            a mindset of <span class="highlight"
+                >continuous self-improvement</span
+            >, and as such I've accrued a lot of varied experience over my <span
+                class="highlight">{yearsOfExperience} years</span
+            > as a software engineer.
+        </p>
+
+        <p>
+            <span class="highlight">I've always been interested in design.</span
+            > At a young age I started trying to break down gameplay systems and
+            mechanics from video games in order to try and understand how games are
+            constructed and why certain decisions may have been made by their creators.
+            This also bled in to thinking about <span class="highlight"
+                >how user's interact and interface with products</span
+            > in general and in my career always revel the opportunity to work with
+            designers and artists to talk and learn about UX and design in general.
+        </p>
+    </section>
+
+    <section class="pt">
+        <ProfessionalTech />
+    </section>
+
+    <section>
+        <PersonalTech />
+    </section>
+
+    <style>
+        .intro {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1rem;
+            gap: 1.5rem;
+            color: var(--primary-200);
+        }
+
+        .intro img {
+            width: 150px;
+            padding: 5px;
+            border: 2px solid var(--primary-200);
+            border-radius: 100%;
+        }
+
+        .highlight {
+            color: var(--highlight);
+        }
+
+        .pt {
+            padding-top: 1px;
+        }
+
+        .pb {
+            padding-bottom: 1px;
+        }
+
+        section {
+            padding: 1rem 1rem;
+            color: var(--text);
+            font-size: large;
+        }
+
+        section:last-of-type {
+            margin-bottom: 1rem;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--primary-900);
+            border-radius: 1rem;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.75rem;
+        }
+
+        h2 {
+            opacity: 0.7;
+        }
+
+        h2 + h2 {
+            opacity: 0.5;
+        }
+    </style>
+</Layout>

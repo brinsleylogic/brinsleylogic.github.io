@@ -1,0 +1,40 @@
+---
+import Navbar from "./Navbar"
+
+const route = Astro.url.pathname
+---
+
+<aside class="container">
+    <div class="inner">
+        <div class="name">Brinsley Blackwood</div>
+
+        <Navbar
+            route={route}
+            client:load
+        />
+    </div>
+</aside>
+
+<style>
+    .container {
+        background-color: var(--primary-900);
+        width: 100%;
+    }
+
+    .inner {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .name {
+        font-size: large;
+    }
+
+    @media screen and (max-width: 390px) {
+        .inner {
+            flex-direction: column;
+        }
+    }
+</style>

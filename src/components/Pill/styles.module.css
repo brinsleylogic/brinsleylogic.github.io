@@ -1,0 +1,11 @@
+.container {
+    padding: 0.5rem 1rem;
+    font-size: 0.825rem;
+    border: 1px solid;
+}
+
+.rounded {
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+}

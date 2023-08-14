@@ -1,0 +1,110 @@
+---
+import Timeline from "../components/Timeline"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Resumé | Brinsley Blackwood">
+    <div class="container">
+        <Timeline
+            heading="Dronecloud"
+            start={2022}
+            languages={[
+                "PHP",
+                "TypeScript",
+                "JavaScript",
+                "JSX",
+                "HTML",
+                "CSS",
+            ]}
+            tech={[
+                "React",
+                "Tailwind",
+                "Storybook",
+                "AWS",
+                "Node.js",
+                "Vitest",
+                "Docker",
+                "MySQL",
+                "MongoDB",
+                "Github Actions",
+            ]}
+            items={[
+                {
+                    label: "Senior Software Engineer",
+                    description:
+                        "As part of a small development team I design and develop solutions to provide a platform for businesses to plan, carry out and grow their drone operations.",
+                },
+            ]}
+        />
+
+        <Timeline
+            heading="Seatfrog"
+            start={2021}
+            end={2022}
+            languages={["PHP", "C#", "TypeScript"]}
+            tech={["AWS", "Serverless", "Node.js", ".Net", "Docker","MySQL", "Github Actions"]}
+            items={[
+                {
+                    label: "Software Engineer",
+                    description:
+                        "Working as part of a small, back-end team to design, develop and maintain solutions to support mobile and web applications; built using a serverless microservice architecture utilising a multitude of languages and technologies.",
+                },
+            ]}
+        />
+
+        <Timeline
+            heading="Switch Studios"
+            start={2017}
+            end={2021}
+            languages={["TypeScript", "HTML", "CSS", "C#"]}
+            tech={["Pixi.js", "Node.js", "SQL Server", "TeamCity", "Jenkins"]}
+            items={[
+                {
+                    label: "Development Team Lead",
+                    description:
+                        "Managing a small team of developers and providing leadership to cross-functional, Agile teams - alongside my previous role as a Senior Developer within those teams. Supporting the professional (skills/knowledge) and personal development of other developers and providing feedback to inform the strategic direction of the development team as a whole, as well as the Studio.",
+                },
+                {
+                    label: "Senior Developer",
+                    description:
+                        "Supporting development of products across multiple cross-functional teams and other technical aspects of the wider business; including some Project Management/Product Ownership responsibilities to aid in the estimation of realistic delivery timelines. In this role I also became the primary point of contact for resolving issues with various externally developed services and frameworks, building good relationships with other teams and companies around the world.",
+                },
+                {
+                    label: "Client Developer",
+                    description:
+                        "As a founding member of the Studio, I helped define and develop the TypeScript framework and methodologies upon which all games have since been built on, as well as design (architecturally) and develop the games themselves.",
+                },
+            ]}
+        />
+
+        <Timeline
+            heading="Sliding Pixel"
+            start={2011}
+            end={2017}
+            languages={["C#", "PHP", "ActionScript 3", "Java"]}
+            tech={[
+                "Unity",
+                "Adobe Flash (Animate)",
+                "MySQL",
+                "Couchbase",
+                "Redis",
+            ]}
+            items={[
+                {
+                    label: "Software Developer",
+                    description:
+                        "As part of a small team I developed and maintained games released to web, Facebook Canvas, Android and iOS using Flash/ActionScript 3 and Unity (with C#). I designed and developed various systems and features of the games, working on the client, logic server and databases; whether defining/designing the architecture or handling implementation.",
+                },
+            ]}
+        />
+    </div>
+</Layout>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+        gap: 1rem;
+    }
+</style>

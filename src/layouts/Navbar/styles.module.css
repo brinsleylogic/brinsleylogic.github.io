@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.item a {
+    text-decoration: none;
+    color: var(--text);
+    transition: 0.2s;
+}
+
+.item a:hover {
+    color: white;
+}
+
+.item a:hover::after {
+    visibility: visible;
+    transform: scaleX(0.5);
+}
+
+.item.active a {
+    color: var(--primary-400);
+}

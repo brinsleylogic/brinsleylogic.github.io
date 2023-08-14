@@ -1,0 +1,11 @@
+{
+    "bracketSpacing": true,
+    "semi": false,
+    "singleAttributePerLine": true,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "importOrder": ["^@", "^[a-z]", "^[./]"],
+    "importOrderCaseInsensitive": true,
+    "importOrderSortSpecifiers": true,
+    "importOrderGroupNamespaceSpecifiers": true
+}

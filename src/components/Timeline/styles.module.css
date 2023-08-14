@@ -1,0 +1,70 @@
+.container {
+    margin-top: 1rem;
+    color: var(--text);
+}
+
+.header {
+    display: inline;
+    margin-bottom: 1rem;
+    padding: 0px;
+    font-size: 1.17em;
+    font-weight: bold;
+    color: var(--primary-400);
+}
+
+.dates {
+    display: inline;
+    padding: 0px;
+    margin-left: 10px;
+    color: var(--primary-300);
+    opacity: 0.6;
+}
+
+.timeline {
+    margin-left: 2rem;
+    padding-left: 2rem;
+	border-left: 2px solid var(--primary-200);
+}
+
+.item {
+    position: relative;
+	padding: 3em 0 1em;
+}
+
+.item::before {
+    content: attr(data-heading);
+    position: absolute;
+    display: block;
+    top: 0.75em;
+    font-weight: bold;
+    color: var(--primary-200);
+}
+
+.item::after {
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    top: 1em;
+    left: -2.5rem;
+    border-radius: 1rem;
+    border: 2px solid  var(--primary-200);
+    background-color: var(--background);
+    content: "";
+}
+
+.filled::after {
+    background-color: var(--primary-100);
+}
+
+.pillContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gap {
+    display: grid;
+    gap: 1rem;
+}
