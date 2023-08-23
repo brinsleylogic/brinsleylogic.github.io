@@ -17,13 +17,15 @@ const config: Omit<ItemProps, "active">[] = [
 ]
 
 export default function ({ route }: Props) {
+    const currentRoute = route === "/" ? route : route.replace(/\/$/, "")
+
     return (
         <div class={styles.container}>
             <For each={config}>
-                {(item) => (
+                {(item: (typeof config)[number]) => (
                     <Item
                         {...item}
-                        active={item.link === route}
+                        active={item.link === currentRoute}
                     />
                 )}
             </For>
