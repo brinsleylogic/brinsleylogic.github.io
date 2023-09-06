@@ -1,12 +1,21 @@
 ---
 import { BiLogosReact } from "solid-icons/bi"
 import Link from "./_index.astro"
+
+export type Props = {
+    native?: boolean
+}
+
+const { native } = Astro.props
+const label = native ? "React Native" : "React"
+const url = native ? "https://reactnative.dev/" : "https://react.dev/"
+
 ---
 
-<Link url="https://react.dev/" label="React">
+<Link url={url} label={label}>
     <BiLogosReact
         size={30}
         fill="#149eca"
-        title="React"
+        title={label}
     />
 </Link>

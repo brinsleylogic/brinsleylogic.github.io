@@ -3,6 +3,7 @@ import dayjs from "dayjs"
 import Layout from "../layouts/Layout.astro"
 import ProfessionalTech from "./tech/ProfessionalTech.astro"
 import PersonalTech from "./tech/PersonalTech.astro"
+import MiscTech from "./tech/MiscTech.astro"
 
 const careerSpan = dayjs().diff("2011-08-17", "year", true)
 const fullYears = Math.floor(careerSpan)
@@ -59,6 +60,10 @@ const yearsOfExperience =
 
     <section>
         <PersonalTech />
+    </section>
+
+    <section>
+        <MiscTech />
     </section>
 
     <style>

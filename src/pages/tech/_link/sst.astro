@@ -1,16 +1,17 @@
 ---
-import { CustomIcon } from "solid-icons/lib"
+import { Icon as AstroIcon } from "astro-icon"
 import Link from "./_index.astro"
-import image from "./sst-logo.svg"
-// https://github.com/sst/identity/blob/main/variants/logomark-white.svg
-
-console.log(typeof image)
 ---
 
 <Link url="https://sst.dev/" label="SST">
-    <CustomIcon
+    <AstroIcon
+        name="sst-logo"
         size={30}
-        fill="#df6543"
-        title="SST"
     />
 </Link>
+
+<style>
+    [astro-icon="sst-logo"] {
+        fill: #df6543;
+    }
+</style>
