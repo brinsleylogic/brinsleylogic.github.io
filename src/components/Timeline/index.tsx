@@ -1,9 +1,11 @@
 import { For } from "solid-js"
 import styles from "./styles.module.css"
 import Pill from "../Pill"
+import { VsGlobe } from "solid-icons/vs"
 
 export default function ({
     heading,
+    site,
     items,
     start,
     end,
@@ -12,10 +14,22 @@ export default function ({
 }: Props) {
     return (
         <div class={styles.container}>
-            <header class={styles.header}>{heading}</header>
-            <label class={styles.dates}>
-                {start} - {end ?? "Present"}
-            </label>
+            <header class={styles.header}>
+                {site && (
+                    <a
+                        href={site}
+                        target="_blank"
+                    >
+                        <VsGlobe />
+                    </a>
+                )}
+
+                <title>{heading}</title>
+
+                <label class={styles.dates}>
+                    {start} - {end ?? "Present"}
+                </label>
+            </header>
 
             <div class={styles.timeline}>
                 <For each={items}>
@@ -69,6 +83,8 @@ type Props = {
 
     start: number
     end?: number
+
+    site?: string
 
     languages?: string[]
     tech?: string[]

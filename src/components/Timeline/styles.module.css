@@ -4,19 +4,32 @@
 }
 
 .header {
-    display: inline;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
     margin-bottom: 1rem;
     padding: 0px;
-    font-size: 1.17em;
-    font-weight: bold;
+}
+
+.header > * {
+    display: flex;
     color: var(--primary-400);
 }
 
-.dates {
-    display: inline;
-    padding: 0px;
-    margin-left: 10px;
-    color: var(--primary-300);
+.header > title {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.header > a {
+    font-size: 1.5rem;
+}
+
+.header > a:hover {
+    color: var(--primary-200);
+}
+
+.header > .dates {
     opacity: 0.6;
 }
 
