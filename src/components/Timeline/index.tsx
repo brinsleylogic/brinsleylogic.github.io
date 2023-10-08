@@ -13,25 +13,26 @@ export default function ({
     tech,
 }: Props) {
     return (
-        <div class={styles.container}>
-            <header class={styles.header}>
+        <div>
+            <header class="flex items-center gap-2 mb-4 p-0 text-primary-600 dark:text-primary-400">
                 {site && (
                     <a
                         href={site}
                         target="_blank"
+                        class="text-2xl transition-colors hover:text-primary-400 dark:hover:text-primary-300"
                     >
                         <VsGlobe />
                     </a>
                 )}
 
-                <title>{heading}</title>
+                <title class="flex font-bold text-lg">{heading}</title>
 
-                <label class={styles.dates}>
+                <label class="text-sm">
                     {start} - {end ?? "Present"}
                 </label>
             </header>
 
-            <div class={styles.timeline}>
+            <div class="ml-8 pl-8 border-l-2 border-primary-400">
                 <For each={items}>
                     {(item, i) => {
                         const filled = !end && i() === 0
@@ -45,13 +46,8 @@ export default function ({
                     }}
                 </For>
 
-                <div class={styles.gap}>
-                    <div
-                        classList={{
-                            [styles.pillContainer]: true,
-                            [styles.padded]: true,
-                        }}
-                    >
+                <div class="grid gap-4">
+                    <div class="flex flex-wrap gap-2">
                         <For each={languages}>
                             {(item) => (
                                 <Pill color="var(--primary-500)">{item}</Pill>
@@ -59,12 +55,7 @@ export default function ({
                         </For>
                     </div>
 
-                    <div
-                        classList={{
-                            [styles.pillContainer]: true,
-                            [styles.padded]: true,
-                        }}
-                    >
+                    <div class="flex flex-wrap gap-2">
                         <For each={tech}>
                             {(item) => (
                                 <Pill color="var(--secondary-500)">{item}</Pill>
@@ -96,7 +87,13 @@ function Item({ label, description, filled }: ItemProps) {
             data-heading={label}
             classList={{
                 [styles.item]: true,
-                [styles.filled]: filled,
+                "relative pt-12 pb-4": true,
+                "before:absolute before:block before:top-3 before:font-bold before:text-primary-400 dark:before:text-primary-500":
+                    true,
+                "after:absolute after:block after:w-4 after:h-4 after:top-4 after:-left-[2.55rem] after:rounded-full after:border after:border-primary-400":
+                    true,
+                "after:bg-primary-400 dark:after:bg-primary-500": filled,
+                "after:bg-white dark:after:bg-slate-950": !filled,
             }}
         >
             <label>{description}</label>

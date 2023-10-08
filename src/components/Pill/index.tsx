@@ -1,16 +1,16 @@
-import tinycolor from "tinycolor2"
 import styles from "./styles.module.css"
 
 export default function ({ color, children }: Props) {
-    const backgroundColor = tinycolor(color).setAlpha(0.05).toRgbString()
-
     return (
         <div
-            classList={{ [styles.container]: true, [styles.rounded]: true }}
+            classList={{
+                [styles.container]: true,
+                [styles.rounded]: true,
+                "bg-white dark:bg-slate-950": true,
+            }}
             style={{
                 color,
                 "border-color": color,
-                "background-color": backgroundColor,
             }}
         >
             {children}

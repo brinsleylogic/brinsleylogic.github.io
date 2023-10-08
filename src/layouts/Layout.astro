@@ -11,7 +11,7 @@ const { title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full text-base select-none">
     <head>
         <ViewTransitions />
         <meta charset="UTF-8" />
@@ -34,59 +34,20 @@ const { title } = Astro.props
         />
         <title>{title}</title>
     </head>
-    <body>
-        <Header />
+    <body class="dark h-full">
+        <div class="bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400">
+            <Header />
 
-        <Main>
-            <slot />
-        </Main>
+            <Main>
+                <slot />
+            </Main>
+        </div>
     </body>
 </html>
 
 <style is:global>
     :root {
-        --background: #111522;
-        --surface-dark: #222222;
-        --surface: #333333;
-        --text: darkgray;
-        --highlight: aliceblue;
-
-        --primary: 0, 200, 255;
-        --primary-100: #cceeff;
-        --primary-200: #99ccff;
-        --primary-300: #66bbff;
-        --primary-400: #33aaff;
         --primary-500: #0099ff;
-        --primary-600: #0066cc;
-        --primary-700: #1f3399;
-        --primary-800: #1c2244;
-        --primary-900: #181d2e;
-
-        --primary-gradient: linear-gradient(
-            45deg,
-            #0099ff,
-            #99ccff 30%,
-            white 60%
-        );
-
         --secondary-500: #ff9900;
-    }
-
-    html {
-        /* font-family: lato, sans-serif; */
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-            "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-            "Noto Color Emoji";
-        background-color: var(--background);
-        color: var(--primary-200);
-        user-select: none;
-    }
-
-    html,
-    body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
     }
 </style>

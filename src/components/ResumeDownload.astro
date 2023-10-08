@@ -1,0 +1,21 @@
+---
+import { Icon as AstroIcon } from "astro-icon"
+---
+
+<div class="flex justify-center my-4">
+    <a download="Brinsley_Blackwood_Resume" href="resume.pdf">
+        <button
+            id="export-pdf"
+            class:list={[
+                "flex items-center gap-2 px-2 py-1 rounded border-2 font-semibold",
+                "bg-primary-500 hover:bg-transparent text-slate-50 hover:text-primary-500 border-transparent hover:border-primary-500",
+                "dark:bg-primary-600 dark:hover:bg-transparent dark:text-slate-950 dark:hover:text-primary-600 dark:hover:border-primary-600",
+                "transition-colors",
+            ]}
+        >
+            <span>Download</span>
+            <AstroIcon pack="teenyicons" name="pdf-outline" size={20} />
+            <!-- <AstroIcon name="mdi:tray-arrow-down" size={20} /> -->
+        </button>
+    </a>
+</div>

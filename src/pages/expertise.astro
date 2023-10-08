@@ -1,72 +1,44 @@
 ---
+import Section from "../components/Section.astro";
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Expertise | Brinsley Blackwood">
-    <section>
-        <h1>Game Development</h1>
-        <p>
-            My passion for playing games and fascination for how their systems all tie together naturally led to my passion for designing and developing them. Over the years I've helped build, release and maintain games built for web (mobile and desktop) and mobile (Android and iOS), from casual games on Facebook to real-time multiplayer strategy games on mobile, to premium casino table games for online casinos.
-        </p>
-    </section>
+    <div class="flex flex-col gap-4">
+        <Section title="Game Development">
+            <p>
+                My passion for playing games and fascination for how their systems all tie together naturally led to my passion for designing and developing them. Over the years I've helped build, release and maintain games built for web (mobile and desktop) and mobile (Android and iOS), from casual games on Facebook to real-time multiplayer strategy games on mobile, to premium casino table games for online casinos.
+            </p>
+        </Section>
 
-    <section>
-        <h1>UI/UX Development
-        </h1>
-        <p>
-            For the majority of my career I have worked with artists and designers to build responsive and intuitive user interfaces and a key part of this relationship has been constant discussion around design improvements to better serve the user experience. At times I have been a key person in pushing meaningful change in this area and my ability to think and work in this headspace has often made me integral in designing and developing UI systems for software at the companies for whom I have worked.
-        </p>
-    </section>
+        <Section title="UI/UX Development">
+            <p>
+                For the majority of my career I have worked with artists and designers to build responsive and intuitive user interfaces and a key part of this relationship has been constant discussion around design improvements to better serve the user experience. At times I have been a key person in pushing meaningful change in this area and my ability to think and work in this headspace has often made me integral in designing and developing UI systems for software at the companies for whom I have worked.
+            </p>
+        </Section>
 
-    <section>
-        <h1>Software Architecture
-        </h1>
-        <p>
-            Having started my career in a (very) small start-up, I was tasked with designing core systems for the company's products; starting with user-input and navigation systems then working on the engine's network communication layer, eventually evolving in to designing full end-to-end systems and features from the database/table design through to the logic server behaviours and down to the client systems and front-end components. As the years have progressed, I've provided feedback that helps inform decisions around overall development and technological strategy for a number of projects, teams and businesses.
-        </p>
-    </section>
+        <Section title="Software Architecture">
+            <p>
+                Having started my career in a (very) small start-up, I was tasked with designing core systems for the company's products; starting with user-input and navigation systems then working on the engine's network communication layer, eventually evolving in to designing full end-to-end systems and features from the database/table design through to the logic server behaviours and down to the client systems and front-end components. As the years have progressed, I've provided feedback that helps inform decisions around overall development and technological strategy for a number of projects, teams and businesses.
+            </p>
+        </Section>
 
-    <section>
-        <h1>Software Optimisation</h1>
-        <p>
-            When a user has what they think is a subpar experience it makes them less likely to continue using your software in the future; whether that's a website, game or user-centric product. Reducing loading/processing times and increasing responsivity is important to increasing product growth and engagement. Thoughout my career I've gained a lot of experience in keeping the balance between complex systems design, maintainability and a smooth user experience.
-        </p>
-    </section>
+        <Section title="Software Optimisation">
+            <p>
+                When a user has what they think is a subpar experience it makes them less likely to continue using your software in the future; whether that's a website, game or user-centric product. Reducing loading/processing times and increasing responsivity is important to increasing product growth and engagement. Thoughout my career I've gained a lot of experience in keeping the balance between complex systems design, maintainability and a smooth user experience.
+            </p>
+        </Section>
 
-    <section>
-        <h1>Knowledge Acquisition</h1>
-        <p>
-            Having worked for smaller companies over many years, I've gained a lot of experience in a wide range of areas of software development and knowledge of the various industries. From compliance within the gambling industry to reducing user friction in casual mobile games, through to understanding how the reservation system for UK rail infratructure works.
-        </p>
-    </section>
+        <Section title="Quick Study">
+            <p>
+                Having worked for smaller companies over many years, I've gained a lot of experience in a wide range of areas of software development and knowledge of the various industries. From compliance within the gambling industry to reducing user friction in casual mobile games, through to understanding how the reservation system for UK rail infratructure works.
+            </p>
+        </Section>
 
-    <section>
-        <h1>Team Leadership</h1>
-        <p>
-            Whether in an official capacity as a line-manager or just as someone who tries to keep work organised, I have often played a key role in ensuring the delivery of products, systems and features to schedule (and budget) that my team(s) have been tasked with developing. Looking out for the interests of my team is what seems to make them look to me for leadership, and that focus on the people always translates in to achieving the business objective whilst bolstering team cohesion and morale.
-        </p>
-    </section>
+        <Section title="Team Leadership">
+            <p>
+                Whether in an official capacity as a line-manager or just as someone who tries to keep work organised, I have often played a key role in ensuring the delivery of products, systems and features to schedule (and budget) that my team(s) have been tasked with developing. Looking out for the interests of my team is what seems to make them look to me for leadership, and that focus on the people always translates in to achieving the business objective whilst bolstering team cohesion and morale.
+            </p>
+        </Section>
+    </div>
 </Layout>
-
-<style>
-    h1 {
-        color: var(--primary-200);
-        opacity: 0.7;
-    }
-
-    section {
-        padding: 1rem 1rem;
-        color: var(--text);
-        font-size: large;
-    }
-
-    section:last-of-type {
-        margin-bottom: 1rem;
-    }
-
-    section:nth-child(even) {
-        padding-top: 1px;
-        background-color: var(--primary-900);
-        border-radius: 1rem;
-    }
-</style>

@@ -9,36 +9,11 @@ const { url, label } = Astro.props
 
 <a
     href={url}
-    class="container"
+    class="flex flex-col basis-[100px] gap-2 items-center justify-center text-center transition-colors text-slate-500 hover:text-primary-500"
 >
-    <slot />
+    <div class="text-black dark:text-white">
+        <slot />
+    </div>
+
     <span>{label}</span>
 </a>
-
-<style>
-    .container {
-        border-radius: 1rem;
-        font-size: medium;
-
-        display: flex;
-        flex-basis: 100px;
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: center;
-        justify-content: center;
-        
-        text-align: center;
-        text-decoration: none;
-        color: var(--text);
-    }
-
-    .container span {
-        color: var(--text);
-
-        transition: color 0.2s ease-in-out;
-    }
-
-    .container:hover span {
-        color: var(--highlight);
-    }
-</style>

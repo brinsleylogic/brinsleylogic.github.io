@@ -1,0 +1,25 @@
+---
+export type Props = {
+    href: string
+}
+
+const { href } = Astro.props
+
+const route = Astro.url.pathname
+const currentRoute = route === "/" ? route : route.replace(/\/$/, "")
+const isCurrent = href === currentRoute
+---
+
+<a
+    href={href}
+    aria-disabled={isCurrent}
+    class:list={[
+        "no-underline",
+        {
+            "transition-colors hover:text-slate-400 dark:hover:text-slate-50": !isCurrent,
+            "text-primary-600 dark:text-primary-400 pointer-events-none": isCurrent,
+        }
+    ]}
+>
+    <slot />
+</a>

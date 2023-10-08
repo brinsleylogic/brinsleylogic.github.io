@@ -1,40 +1,24 @@
 ---
-import Navbar from "./Navbar"
-
-const route = Astro.url.pathname
+import NavItem from "./NavItem.astro";
 ---
 
-<header class="container">
-    <div class="inner">
-        <div class="name">Brinsley Blackwood</div>
+<header class="w-full bg-slate-200 dark:bg-slate-900 text-slate-600 dark:text-slate-400">
+    <div class="inner flex justify-between px-4 py-2">
+        <div class="text-lg font-semibold">Brinsley Blackwood</div>
 
-        <Navbar
-            route={route}
-            client:load
-        />
+        <div class="flex gap-2">
+            <NavItem href="/">Home</NavItem>
+            <NavItem href="/expertise">Expertise</NavItem>
+            <NavItem href="/resume">Resumé</NavItem>
+        </div>
     </div>
 </header>
 
 <style>
-    .container {
-        background-color: var(--primary-900);
-        width: 100%;
-    }
-
-    .inner {
-        padding: 10px 20px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .name {
-        font-size: large;
-    }
-
     @media screen and (max-width: 390px) {
         .inner {
             flex-direction: column;
+            align-items: center;
         }
     }
 </style>
