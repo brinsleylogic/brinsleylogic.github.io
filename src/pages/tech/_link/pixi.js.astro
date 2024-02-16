@@ -1,17 +1,17 @@
 ---
-import { Icon as AstroIcon } from "astro-icon"
+import { Icon as AstroIcon } from "astro-icon/components"
 import Link from "./_index.astro"
 ---
 
 <Link url="https://pixijs.com/" label="PixiJs">
     <AstroIcon
-        name="pixijs-logo"
+        name="pixijs"
         size={30}
     />
 </Link>
 
 <style>
-    [astro-icon="pixijs-logo"] {
+    [data-icon] {
         color: #e72264;
     }
 </style>

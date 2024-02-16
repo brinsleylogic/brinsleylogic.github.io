@@ -1,17 +1,17 @@
 ---
-import { Icon as AstroIcon } from "astro-icon"
+import { Icon as AstroIcon } from "astro-icon/components"
 import Link from "./_index.astro"
 ---
 
 <Link url="https://sst.dev/" label="SST">
     <AstroIcon
-        name="sst-logo"
+        name="sst"
         size={30}
     />
 </Link>
 
 <style>
-    [astro-icon="sst-logo"] {
-        fill: #df6543;
+    [data-icon] {
+        color: #df6543;
     }
 </style>

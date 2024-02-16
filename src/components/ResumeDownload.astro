@@ -1,9 +1,9 @@
 ---
-import { Icon as AstroIcon } from "astro-icon"
+import { Icon as AstroIcon } from "astro-icon/components"
 ---
 
 <div class="flex justify-center my-4">
-    <a download="Brinsley_Blackwood_Resume" href="resume.pdf">
+    <a download="Brinsley_Blackwood_Resume" href="public/resume.pdf">
         <button
             id="export-pdf"
             class:list={[
@@ -14,8 +14,7 @@ import { Icon as AstroIcon } from "astro-icon"
             ]}
         >
             <span>Download</span>
-            <AstroIcon pack="teenyicons" name="pdf-outline" size={20} />
-            <!-- <AstroIcon name="mdi:tray-arrow-down" size={20} /> -->
+            <AstroIcon name="teenyicons:pdf-outline" size={20} />
         </button>
     </a>
 </div>
